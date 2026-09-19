@@ -1,0 +1,105 @@
+/* { border: 1px solid red; } selector universal*/
+
+html{
+      font-size: 16px;
+}
+
+body {
+    
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.perfume{
+    display:flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.perfume__imagen{
+    width: 100%;
+    height: auto;
+}
+
+.perfume__titulo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.perfume__categoria {
+    font-weight: 500;
+}
+
+.perfume__precio{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+}
+
+.perfume__precio-rebajado{
+    color: hsl(158, 36%, 37%) ;
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+.perfume__precio-original{
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.perfume__contenido{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.6rem;
+    gap: 1rem;  
+}
+    
+.perfume__boton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            background-color:  hsl(158, 42%, 18%);
+            color: white;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 15px 20px;
+}
+
+.perfume__boton:hover {
+    background-color: hsl(158, 42%, 55%);
+}
+
+@media (min-width: 768px) {
+    .perfume {
+        flex-direction: row;
+        max-width: 800px;
+        
+    }
+
+    .perfume__imagen-contenedor{
+        flex: 1;
+        
+    }
+
+    .perfume__contenido {
+        flex: 1;
+        
+    }
+
+    .perfume__imagen {
+        height: 100%;
+        object-fit: cover;
+    }
+   
+}
